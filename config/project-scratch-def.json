@@ -1,0 +1,34 @@
+{
+  "orgName": "DEV_SCRATCH_ORG",
+  "edition": "Developer",
+  "adminEmail": "yalin.yhb@gmail.com",
+  "description": "scratch org",
+  "hasSampleData": true,
+  "features": [
+    "Communities",
+    "ServiceCloud",
+    "DebugApex",
+    "EnableSetPasswordInApi"
+  ],
+  "settings": {
+    "securitySettings": {
+      "sessionSettings": {
+        "forceRelogin": false,
+        "sessionTimeout": "TwentyFourHours"
+      }
+    },
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "apexSettings": {
+      "enableCompileOnDeploy": false,
+      "enableAggregateCodeCoverageOnly": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
+    },
+    "currencySettings": {
+      "enableMultiCurrency": true
+    }
+  }
+}
