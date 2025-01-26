@@ -1,4 +1,5 @@
 <template>
+	<c-tt-header oncreatetask={handleTaskCreated}></c-tt-header>
 	<div class="kanban-board">
 		<template for:each={columns} for:item="column">
 			<c-tt-column
