@@ -1,7 +1,11 @@
 <template>
 	<div class="kanban-board">
 		<template for:each={columns} for:item="column">
-			<c-tt-column key={column.id} column={column}></c-tt-column>
+			<c-tt-column
+				key={column.id}
+				column={column}
+				ontaskdropped={handleTaskDropped}>
+			</c-tt-column>
 		</template>
 	</div>
 </template>
