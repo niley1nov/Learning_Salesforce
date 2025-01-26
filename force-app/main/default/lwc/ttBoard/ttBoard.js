@@ -26,6 +26,10 @@ export default class TtBoard extends LightningElement {
         },
     ];
 
+    get columnSize() {
+        return Math.floor(12 / this.columns.length);
+    }
+
     handleTaskDropped(event) {
         const { taskId, fromColumnId, toColumnId } = event.detail;
         
@@ -53,5 +57,14 @@ export default class TtBoard extends LightningElement {
         const toDoColumn = this.columns.find(col => col.id === '1');
         toDoColumn.tasks.push(newTask);
         this.columns = [...this.columns];
+    }
+
+    handleTaskDelete(event) {
+        const { taskId, columnId } = event.detail;
+        const column = this.columns.find(col => col.id === columnId);
+        if (column) {
+            column.tasks = column.tasks.filter(task => task.id !== taskId);
+            this.columns = [...this.columns];
+        }
     }
 }

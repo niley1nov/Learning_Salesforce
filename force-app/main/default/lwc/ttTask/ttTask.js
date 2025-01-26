@@ -8,4 +8,14 @@ export default class TtTask extends LightningElement {
         event.dataTransfer.setData('text/plain', this.task.id);
         event.dataTransfer.setData('fromColumnId', this.columnId);
     }
+
+    handleDeleteTask(event) {
+        this.dispatchEvent(
+            new CustomEvent('deletetask', {
+                detail: { taskId: this.task.id, columnId: this.columnId },
+                bubbles: true,
+                composed: true,
+            })
+        );
+    }
 }

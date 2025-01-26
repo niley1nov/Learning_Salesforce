@@ -3,8 +3,20 @@
 		class="kanban-task"
 		draggable="true"
 		data-id={task.id}
-		ondragstart={handleDragStart}>
-		<h3 class="task-title">{task.title}</h3>
-		<p class="task-details">{task.details}</p>
+		ondragstart={handleDragStart}
+	>
+		<div class="task-header">
+			<lightning-formatted-text value={task.title} class="task-title"></lightning-formatted-text>
+			<lightning-button-icon
+				icon-name="utility:close"
+				alternative-text="Delete Task"
+				class="delete-icon"
+				variant="bare"
+				onclick={handleDeleteTask}>
+			></lightning-button-icon>
+		</div>
+		<div class="task-body">
+			<lightning-formatted-text value={task.details} class="task-details"></lightning-formatted-text>
+		</div>
 	</div>
 </template>

@@ -15,8 +15,8 @@ export default class TtColumn extends LightningElement {
 
         this.dispatchEvent(
             new CustomEvent('taskdropped', {
-                detail: {taskId, fromColumnId, toColumnId},
+                detail: { taskId, fromColumnId, toColumnId },
             })
         );
-    }    
+    }
 }
