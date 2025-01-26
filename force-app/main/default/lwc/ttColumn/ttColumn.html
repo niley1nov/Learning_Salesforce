@@ -1,10 +1,19 @@
 <template>
-	<div class="kanban-column">
-		<h2 class="column-header">{column.title}</h2>
-		<div class="kanban-tasks">
-			<template for:each={column.tasks} for:item="task">
-				<c-tt-task key={task.id} task={task}></c-tt-task>
-			</template>
-		</div>
-	</div>
+    <lightning-card
+		title={column.title}
+		class="kanban-column"
+		data-id={column.id}
+		ondragover={allowDrop}
+		ondrop={handleDrop}
+	>
+        <div class="kanban-tasks">
+            <template for:each={column.tasks} for:item="task">
+                <c-tt-task
+					key={task.id}
+					task={task}
+					column-id={column.id}>
+				</c-tt-task>
+            </template>
+        </div>
+    </lightning-card>
 </template>

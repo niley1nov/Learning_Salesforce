@@ -1,20 +1,18 @@
 .kanban-column {
-    flex: 0 0 300px;
-    background: #ffffff;
-    border: 1px solid #ddd;
+    flex: 1;
+    max-width: 300px;
+    min-width: 300px;
+    margin: 0 auto;
     border-radius: 5px;
-    padding: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.column-header {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .kanban-tasks {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    min-height: 100px;
+    padding: 1rem;
 }

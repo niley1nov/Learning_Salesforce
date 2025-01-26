@@ -1,7 +1,14 @@
 <template>
-	<div class="kanban-board">
+	<c-tt-header oncreatetask={handleTaskCreated}></c-tt-header>
+	<lightning-layout class="kanban-board" multiple-rows="false">
 		<template for:each={columns} for:item="column">
-			<c-tt-column key={column.id} column={column}></c-tt-column>
+			<lightning-layout-item key={column.id} flexibility="auto">
+				<c-tt-column
+					column={column}
+					ontaskdropped={handleTaskDropped}
+					ondeletetask={handleTaskDelete}>
+			</c-tt-column>
+			</lightning-layout-item>
 		</template>
-	</div>
+	</lightning-layout>
 </template>

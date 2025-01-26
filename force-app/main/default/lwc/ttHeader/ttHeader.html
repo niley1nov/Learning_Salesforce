@@ -1,0 +1,14 @@
+<template>
+    <lightning-layout class="header-container">
+        <lightning-layout-item flexibility="auto">
+            <h1 class="header-title">Task Tracker Board</h1>
+        </lightning-layout-item>
+        <lightning-layout-item flexibility="shrink">
+            <lightning-button
+                label="Create Task"
+                variant="brand"
+                onclick={handleCreateTask}>
+            </lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>
