@@ -1,6 +1,6 @@
 import { LightningElement } from 'lwc';
 
-export default class TaskTrackerBoard extends LightningElement {
+export default class TtBoard extends LightningElement {
     columns = [
         {
             id: '1',

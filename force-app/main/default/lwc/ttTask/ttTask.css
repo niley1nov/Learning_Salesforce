@@ -1,0 +1,16 @@
+.kanban-task {
+    background: #e3f2fd;
+    border: 1px solid #90caf9;
+    border-radius: 5px;
+    padding: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-title {
+    font-weight: bold;
+}
+
+.task-details {
+    font-size: 0.875rem;
+    color: #616161;
+}
