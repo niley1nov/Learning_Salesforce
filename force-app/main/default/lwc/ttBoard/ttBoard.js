@@ -48,10 +48,11 @@ export default class TtBoard extends LightningElement {
     }
 
     handleTaskCreated() {
+        const { taskTitle, taskDetails } = event.detail;
         const newTask = {
             id: Date.now().toString(),
-            title: `New Task ${this.columns[0].tasks.length + 1}`,
-            details: 'Task Details here...',
+            title: taskTitle,
+            details: taskDetails,
         };
 
         const toDoColumn = this.columns.find(col => col.id === '1');
