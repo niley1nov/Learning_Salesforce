@@ -1,0 +1,31 @@
+<template>
+    <lightning-modal-header label="Create New Task"></lightning-modal-header>
+    <lightning-modal-body>
+        <lightning-input
+            label="Task Title"
+            value={taskTitle}
+            onchange={handleTitleChange}
+            required
+            class="form-field">
+        </lightning-input>
+        <lightning-textarea
+            label="Task Details"
+            value={taskDetails}
+            onchange={handleDetailsChange}
+            required
+            class="form-field">
+        </lightning-textarea>
+        <template if:true={errorMessage}>
+            <div class="error-message">{errorMessage}</div>
+        </template>
+    </lightning-modal-body>
+    <lightning-modal-footer>
+        <lightning-button label="Cancel" variant="neutral" onclick={handleCancel}></lightning-button>
+        <lightning-button
+            label="Create"
+            variant="brand"
+            onclick={handleCreate}
+            disabled={isCreateDisabled}>
+        </lightning-button>
+    </lightning-modal-footer>
+</template>
