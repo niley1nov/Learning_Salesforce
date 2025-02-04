@@ -4,7 +4,7 @@
         <itemInstances>
             <componentInstance>
                 <componentName>ttBoard</componentName>
-                <identifier>c_ttBoard</identifier>
+                <identifier>c_ttBoard2</identifier>
             </componentInstance>
         </itemInstances>
         <name>main</name>
@@ -12,7 +12,7 @@
     </flexiPageRegions>
     <masterLabel>Board</masterLabel>
     <template>
-        <name>flexipage:defaultAppHomeTemplate</name>
+        <name>runtime_platform_privacycenter:homeTemplateOneRegion</name>
     </template>
-    <type>AppPage</type>
+    <type>HomePage</type>
 </FlexiPage>
